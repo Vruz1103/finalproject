@@ -1,0 +1,35 @@
+.search {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  color: black;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  margin-right: 10px;
+  width: 200px;
+}
+
+/* .search button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search img {
+  width: 20px;
+  height: 20px;
+} */
+
+@media (max-width: 768px) {
+  .search {
+    margin: 10px 0;
+    width: 100%;
+  }
+}

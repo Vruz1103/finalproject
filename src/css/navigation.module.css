@@ -1,0 +1,21 @@
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navitems {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    margin-top: 10px;
+  }
+
+  .navitems {
+    text-wrap: wrap;
+  }
+}

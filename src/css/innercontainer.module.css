@@ -1,0 +1,25 @@
+.innerContainer {
+  flex: 1;
+  padding: 20px;
+  margin: 10px;
+  gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a1a1a;
+  /* margin-bottom: 0;
+  padding-bottom: 0; */
+}
+
+/* .movieGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+} */
+
+/* .bodyHome {
+  display: flex;
+  justify-content: space-between;
+} */
