@@ -1,5 +1,6 @@
 .movieCard {
   width: 200px;
+  height: auto;
   background-color: #0f1015;
   border-radius: 8px;
   overflow: hidden;
@@ -58,6 +59,14 @@
 
 .movieCard:hover {
   transform: scale(1.05);
+  border: #ffd700 5px solid;
+  background-color: #14131367;
+  overflow: hidden;
+  filter: brightness(80%);
+  /* transform: translate(-50%, -50%) scale(1); */
+  /* opacity: 1; */
+
+  /* box-shadow: 0 0 0 3px #ffd700; */
 }
 
 .featuredTag {
@@ -70,4 +79,17 @@
   border-radius: 4px;
   font-size: 12px;
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .movieCard {
+    display: flex;
+    flex-direction: column;
+    background-color: #0f1729;
+    border-radius: 8px;
+    overflow: hidden;
+    gap: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
 }

@@ -3,37 +3,92 @@
   justify-content: space-between;
 } */
 
-.featuredmovie {
+.topMovie {
   /* background-color: #0f1729; */
   background-color: #1a2332;
   border-radius: 8px;
   padding: 20px;
   width: 300px;
   color: white;
-  border-bottom: white 1px solid;
+  position: sticky;
+  top: 20px;
+  align-self: start;
+  font-family: Arial, sans-serif;
+
+  /* border-bottom: white 1px solid; */
 }
 
-.header {
+.topMovieHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
   font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 15px;
+  /* font-weight: bold; */
+  /* margin-bottom: 15px; */
   color: #ffd700;
+  /* word-wrap: wrap; */
 }
 
-.movieList {
+.topMovieHeader h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.tabButton {
+  background-color: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.tabButton:hover {
+  color: #ffffff;
+}
+
+.tabButton.active {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.moviesList {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  /* align-items: center; */
 }
 
-.movieItem {
+.moviesItem {
   display: flex;
   align-items: center;
   padding: 10px;
   background-color: #1a2332;
-  border-radius: 8px;
+
   transition: background-color 0.3s ease;
+  /* height: 15vh; */
+  border-bottom: 2px solid white;
 }
+
+.moviePoster {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.topMovieName {
+  /* font-size: 0.5rem; */
+}
+/* .moviesItem:: */
 
 .movieItem:hover {
   background-color: #2a3447;
@@ -48,18 +103,28 @@
 }
 
 .movieInfo {
-  flex: 1;
+  flex-grow: 1;
 }
 
 .movieTitle {
   font-size: 0.9em;
   font-weight: bold;
   margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .movieViews {
   font-size: 0.8em;
   color: #ffd700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.movieViews::before {
+  content: "★";
+  color: #fbbf24;
 }
 
 /* Responsive adjustments */

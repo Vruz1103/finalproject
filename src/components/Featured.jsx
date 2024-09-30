@@ -5,6 +5,7 @@ import Container from "./Container";
 import InnerContainer from "./InnerContainer";
 import MovieList from "./MovieList";
 import styles from "../css/featured.module.css";
+import Footer from "./Footer";
 
 const movies = [];
 
@@ -31,6 +32,7 @@ export default function Featured() {
             <MovieList />
           </InnerContainer>
         </div> */}
+        <Footer />
       </Container>
       {/* Featured */}
       {/* <h1 >{titlename}</h1> */}

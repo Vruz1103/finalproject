@@ -1,5 +1,5 @@
 .movieHeadings {
-  color: #fec848;
+  /* color: #fec848;
   text-transform: uppercase;
   margin-top: 20px;
   margin-left: 20px;
@@ -7,7 +7,15 @@
   padding-bottom: 0;
   margin-bottom: 0;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: bold; */
+  /* background-color: #1a1a1a; */
+  color: #fec848;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .sectionWrapper {
@@ -15,6 +23,6 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  background-color: #0f1729;
+  /* background-color: #0f1729; */
   color: white;
 }

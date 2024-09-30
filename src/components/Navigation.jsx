@@ -1,22 +1,48 @@
+import Home from "./Home";
+import Featured from "./Featured";
+import Genres from "./Genres";
+import Movies from "./Movies";
+import TvShows from "./TvShows";
+import styles from "../css/navigation.module.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
+export default function Navigation() {
+  // const [open, setOpen] = useState(false);
+  const [isGenresOpen, setIsGenresOpen] = useState(false);
 
+  return (
+    <>
+      <Genres isOpen={isGenresOpen} onClose={() => setIsGenresOpen(false)} />
 
-import Home from "./Home"
-import Featured from "./Featured"
-import Genres from "./Genres"
-import Movies from "./Movies"
-import TvShows from "./TvShows"
-import styles from "../css/navigation.module.css"
+      {/* {open && <Genres />} */}
+      <div className={styles.nav}>
+        <Link to="/" className={styles.navitems}>
+          Home
+        </Link>
 
-export default function Navigation(){
-    return(<div className={styles.nav}>
-        <a href="/Home" className={styles.navitems}>Home</a>
-        
-        <a href="/Featured" className={styles.navitems}>Featured</a>
-     
-        <a href="Genres" className={styles.navitems}>Genres</a>
-        <a href="Movies" className={styles.navitems}>Movies</a>
-        <a href="TvShows" className={styles.navitems}>Tv Shows</a>
-     
-    </div>)
+        <Link to="/Featured" className={styles.navitems}>
+          Featured
+        </Link>
+
+        <Link
+          to="#"
+          className={styles.navitems}
+          // onClick={() => {
+          //   setOpen(!open);
+          // }}
+          onClick={() => setIsGenresOpen(true)}
+        >
+          Genres
+        </Link>
+
+        <Link to="/Movies" className={styles.navitems}>
+          Movies
+        </Link>
+        <Link to="/TvShows" className={styles.navitems}>
+          Tv Shows
+        </Link>
+      </div>
+    </>
+  );
 }

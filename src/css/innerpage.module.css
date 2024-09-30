@@ -1,0 +1,17 @@
+.innerPage {
+  background-color: #1a1a1a;
+}
+
+.sectionWrapper {
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  /* background-color: #0f1729; */
+  color: white;
+}
+
+.movieDetails {
+  display: flex;
+  justify-content: space-between;
+}

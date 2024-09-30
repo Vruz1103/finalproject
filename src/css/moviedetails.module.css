@@ -1,0 +1,12 @@
+.movieDetails {
+  box-sizing: border-box;
+  margin-top: 40px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movieDetailsImg {
+  /* height: 65vh;
+  width: 15vw; */
+}

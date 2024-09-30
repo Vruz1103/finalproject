@@ -17,6 +17,7 @@ import TvShows from "./components/TvShows";
 import Movies from "./components/Movies";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 import styles from "./css/innercontainer.module.css";
+import InnerPage from "./components/InnerPage";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -25,11 +26,16 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/Home" element={<Home />} /> */}
         <Route path="/featured" element={<Featured />} />
-        <Route path="/genres" element={<Home />} />
+        {/* <Route path="/genres" element={<Home />} /> */}
         <Route path="/movies" element={<Movies />} />
         <Route path="/tvshows" element={<TvShows />} />
+        <Route path="/films/:name" element={<InnerPage />} />
+        <Route path="tvshows/films/:name" element={<InnerPage />} />
+        <Route path="movies/films/:name" element={<InnerPage />} />
+        <Route path="featured/films/:name" element={<InnerPage />} />
       </Routes>
       {/* <Container>
       

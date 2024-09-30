@@ -32,6 +32,7 @@ api.interceptors.response.use(
 
 export default function TopMovie() {
   const [topMovie, setTopMovie] = useState([]);
+  const [activeTab, setActiveTab] = useState("day");
   // return(<div className={styles.topmovie}>
   //     <div>Top Movie
   //         <img></img>
@@ -63,11 +64,40 @@ export default function TopMovie() {
   // </div>)
   // }
   return (
-    <div className={styles.featuredmovie}>
-      <h2 className={styles.header}>TOP MOVIE</h2>
-      <div className={styles.movieList}>
+    <div className={styles.topMovie}>
+      <div className={styles.topMovieHeader}>
+        <h2 className={styles.topMovieName}>TOP MOVIE</h2>
+        <div className={styles.tabs}>
+          <button
+            className={`${styles.tabButton} ${
+              activeTab === "day" ? styles.active : ""
+            }`}
+            onClick={() => setActiveTab("day")}
+          >
+            Day
+          </button>
+          <button
+            className={`${styles.tabButton} ${
+              activeTab === "week" ? styles.active : ""
+            }`}
+            onClick={() => setActiveTab("week")}
+          >
+            Week
+          </button>
+          <button
+            className={`${styles.tabButton} ${
+              activeTab === "month" ? styles.active : ""
+            }`}
+            onClick={() => setActiveTab("month")}
+          >
+            Month
+          </button>
+        </div>
+      </div>
+
+      <div className={styles.moviesList}>
         {topMovie?.map((movie) => (
-          <div key={movie.id} className={styles.movieItem}>
+          <div key={movie.id} className={styles.moviesItem}>
             <img
               src={movie.image?.medium || "/placeholder.jpg"}
               alt={movie.name}
@@ -76,7 +106,7 @@ export default function TopMovie() {
             <div className={styles.movieInfo}>
               <div className={styles.movieTitle}>{movie.name}</div>
               <div className={styles.movieViews}>
-                {movie.rating?.average || "N/A"}
+                {movie?.rating?.average || "N/A"}
               </div>
             </div>
           </div>

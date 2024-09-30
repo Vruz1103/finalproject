@@ -3,11 +3,11 @@
   text-transform: uppercase;
   margin-top: 20px;
   margin-left: 20px;
-  /* font-size: 1.3rem; */
+  font-size: 1.3rem;
   padding-bottom: 0;
   margin-bottom: 0;
-  font-size: 24px;
-  font-weight: bold;
+  /* font-size: 24px; */
+  /* font-weight: bold; */
   /* color: #ffd700; */
   /* margin-bottom: 20px; */
 }
@@ -16,7 +16,18 @@
   background-color: #1a1a1a;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  background-color: #0f1729;
+  /* padding: 20px;
+  background-color: #0f1729; */
   color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }

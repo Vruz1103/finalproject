@@ -4,13 +4,17 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 10px 20px;
   /* background-color: #1a1a1a; */
   background-color: #252525;
   color: white;
-  border-bottom: white 2px solid;
+  /* border-bottom: white 2px solid; */
+  box-shadow: 0 2px 4px 0px #b6b6b691;
+  position: relative;
+  height: 15vh;
+  width: 100%;
 }
 
 @media (max-width: 768px) {

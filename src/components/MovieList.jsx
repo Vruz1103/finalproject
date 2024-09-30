@@ -91,9 +91,11 @@ export default function MovieList({ limit }) {
         {/* <MovieCard/> */}
         {/* <Featured/> */}
         {/* <div className={styles.movieGrid}> */}
-        {movieList?.map((movie) => (
-          <MovieItem key={movie.id} movie={movie} />
-        ))}
+        <div className={styles.movieListContainer}>
+          {movieList?.map((movie) => (
+            <MovieItem key={movie.id} movie={movie} />
+          ))}
+        </div>
         {/* </div> */}
       </div>
     </>
